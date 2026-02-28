@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fdfbf7;
+  --bg-alt: #f5f0e8;
+  --text: #2c2c2c;
+  --text-light: #5a5a5a;
+  --accent: #1a4d6e;
+  --accent-light: #2a7ab5;
+  --border: #d4cbb8;
+  --success: #2e7d32;
+  --error: #c62828;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
+
+header,
+main,
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Manifesto Article */
+
+#manifesto {
+  margin-bottom: 3rem;
+}
+
+.preamble {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+#manifesto section {
+  margin-bottom: 2.5rem;
+}
+
+#manifesto h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+#manifesto p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.closing {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center !important;
+  margin-top: 2rem;
+}
+
+/* Sign Section */
+
+#sign-section {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+#sign-section h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.required {
+  color: var(--error);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(26, 77, 110, 0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.char-count {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+button[type="submit"],
+#load-more-btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  color: #fff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover,
+#load-more-btn:hover {
+  background-color: var(--accent-light);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#form-feedback {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  min-height: 1.4em;
+}
+
+#form-feedback.success {
+  color: var(--success);
+}
+
+#form-feedback.error {
+  color: var(--error);
+}
+
+/* Signatories Section */
+
+#signatories-section {
+  margin-bottom: 3rem;
+}
+
+#signatories-section h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+#signatories-count {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+#signatories-list {
+  list-style: none;
+}
+
+#signatories-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.signatory-name {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.signatory-message {
+  display: block;
+  font-style: italic;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.signatory-date {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+#load-more-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  #sign-section {
+    padding: 1.2rem;
+  }
+}

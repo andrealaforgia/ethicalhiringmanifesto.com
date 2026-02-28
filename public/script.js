@@ -23,7 +23,7 @@
   async function loadSignatures(append) {
     try {
       const res = await fetch(
-        "/api/signatures?limit=" + PAGE_SIZE + "&offset=" + offset
+        "api/signatures?limit=" + PAGE_SIZE + "&offset=" + offset
       );
       if (!res.ok) throw new Error("Failed to load");
       const data = await res.json();
@@ -101,7 +101,7 @@
     submitBtn.textContent = "Submitting…";
 
     try {
-      var res = await fetch("/api/sign", {
+      var res = await fetch("api/sign", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
